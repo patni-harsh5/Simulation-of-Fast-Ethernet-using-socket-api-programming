@@ -1,0 +1,62 @@
+   TCPAcceptor.h
+
+   TCPAcceptor class interface. TCPAcceptor provides methods to passively
+   establish TCP/IP connections with clients.
+
+      TCPConnector.h
+
+   TCPConnector class definition. TCPConnector provides methods to actively
+   establish TCP/IP connections with a server.
+   
+    TCPConnector.h
+
+   TCPConnector class interface. TCPConnector provides methods to actively
+   establish TCP/IP connections with a server.
+   
+      TCPStream.h
+
+   TCPStream class definition. TCPStream provides methods to trasnfer
+   data between peers over a TCP/IP connection.
+
+	 TCPStream.h
+
+   TCPStream class interface. TCPStream provides methods to trasnfer
+   data between peers over a TCP/IP connection.
+
+
+Server-Test 
+   server for the tcpsockets classes which handles connections iteratively.
+
+Client-Test 
+    client for the tcpsockets classes. 
+   
+      client_timeout.cpp
+
+   Test client for the tcpsockets classes. Use this program to test connect
+   and receive time out capabilties.  Start the server_pause on one port and
+   the server_timeout on the other.  Then run client_timeout specifying the
+   server_pause and server_timeout ports.  The client will time out trying
+   to connect to server_pause, which never accepts connections.  The client
+   will then time out waiting for a reply from server_timeout which never 
+   replies to clients.
+
+   
+      server_pause.cpp
+
+   Test server for the time out capabilties of the TCPConnector class.  This 
+   server will bind to a given IP address and TCP port but never start listening. 
+   Use it to test connect time outs in client_timeout.
+   
+      server.cpp
+
+   Test server for the time out capabilties of the TCPStream class.  This 
+   server accepts connections and receive requests but never sends any replies.
+   Use it to test receive time out in client_timeout.
+
+   
+    TCPAcceptor.cpp
+
+   TCPAcceptor class definition. TCPAcceptor provides methods to passively
+   establish TCP/IP connections with clients.
+
+ 
